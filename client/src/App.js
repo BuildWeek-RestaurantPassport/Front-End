@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Components
-import Navigation from './components/Navigation';
+import Navigation from './components/header/Navigation';
 
 function App() {
   return (
