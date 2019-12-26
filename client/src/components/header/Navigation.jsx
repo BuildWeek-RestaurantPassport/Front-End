@@ -10,7 +10,7 @@ const Navigation = (props) => {
                 <NavLink to='/passport'>
                     My Passport <span>{props.length}</span>
                 </NavLink>
-                <button>Try it FREE</button>
+                <button className='btn btn-outline-primary'>Try it FREE</button>
             </div>
         </div>
     );

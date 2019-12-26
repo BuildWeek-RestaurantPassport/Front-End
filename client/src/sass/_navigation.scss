@@ -1,0 +1,32 @@
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 1.5rem;
+    transition: 0.2s ease-in;
+
+    color: $black;
+    background: #dfe6ed;
+
+    // nav-links
+	a {
+		color: $black;
+		text-decoration: none;
+		padding: 0 20px;
+
+        // my passport count
+		span {
+			display: inline-block;
+			position: relative;
+			top: -8px;
+			left: 0px;
+			font-weight: bold;
+			line-height: 18px;
+			text-align: center;
+			background: white;
+			border-radius: 100%;
+			width: 18px;
+			height: 18px;
+		}
+	}
+}
