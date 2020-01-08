@@ -1,11 +1,21 @@
 import React from 'react';
 
-const myPassport = ({ passport }) => (
-    <ul>
-        {passport.map(item => (
-            <li>{item}</li>
-        ))}
-    </ul>
-);
+const Passport = props => {
+    return (
+        <div className="restaurant">
 
-export default myPassport;
+            <h1 className="title">{props.restaurant.title}</h1>
+
+            <address className="address">
+                <span>{props.restaurant.street}</span>
+                <span>{props.restaurant.city}</span>
+            </address>
+
+            <button onClick={() => props.removeItem(props.restaurant)}>
+                Remove from passport
+			</button>
+        </div>
+    );
+};
+
+export default Passport;

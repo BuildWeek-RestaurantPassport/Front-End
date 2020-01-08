@@ -2,15 +2,16 @@ import React from 'react';
 
 import Restaurant from './Restaurant';
 
-const Restaurants = ({ restaurants, addItem }) => (
+const myPassport = ({ passport }) => (
     <div>
-        {restaurants.map(restaurant => (
+        {passport.map(restaurant => (
             <Restaurant
                 key={restaurant.id}
                 restaurant={restaurant}
-                addItem={addItem}
+                removeItem={removeItem}
             />
         ))}
     </div>
 );
-export default Restaurants;
+
+export default myPassport;
