@@ -1,12 +1,11 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
 import { Route } from 'react-router-dom'
 
 // Components
 import Navigation from './components/header/Navigation';
 import Home from './components/Home'
 import Registration from './components/Registration';
-import Restaurants from './components/restaurants/Restaurants';
+import Login from './components/Login';
 
 function App() {
 
@@ -15,8 +14,7 @@ function App() {
       <Navigation />
       <Home />
       <Registration />
-      <Route exact path="/" component={Restaurants} />
-
+      <Login />
     </div>
   );
 }

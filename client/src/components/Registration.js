@@ -9,8 +9,8 @@ function Registration() {
   const LogIn = <a href="/log-in">Login</a>;
   return (
     <>
-      <NavContainer></NavContainer>
-      <RegisterContainer>
+
+      <div className="login-container">
         <h1>Register</h1>
         <Form className="form">
           <Field
@@ -67,7 +67,7 @@ function Registration() {
           <Button type="submit"> Login </Button>
           <br /> <br />
         </Form>
-      </RegisterContainer>
+      </div>
     </>
   );
 }
