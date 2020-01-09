@@ -58,5 +58,13 @@
 
 |                                      [Bradley Zickafoose](https://github.com/bradzickafoose)                                     | 
 | :----------------------------------------------------------------------------------------------------------------------: | 
-|      [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/in/zickafoose)                 | 
+|      [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/bradzickafoose)                 | 
 | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/zickafoose/)  
+|                                      [Dereck Lawrence Jr](https://github.com/dlawrencejr)                                     | 
+| :----------------------------------------------------------------------------------------------------------------------: | 
+|      [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/dlawrencejr)                 | 
+| [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/derecklawrencejr/)  
+|                                      [Shafi Masoumi](https://github.com/shafi2019)                                     | 
+| :----------------------------------------------------------------------------------------------------------------------: | 
+|      [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/shafi2019)                 | 
+| [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)  
