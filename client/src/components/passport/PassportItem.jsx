@@ -1,4 +1,6 @@
 import React from 'react';
+import Rating from '../rating/Rating';
+import PassportForm from './PassportForm';
 
 const PassportItem = props => {
     return (
@@ -10,6 +12,9 @@ const PassportItem = props => {
                 <span>{props.restaurant.street}</span>
                 <span>{props.restaurant.city}</span>
             </address>
+
+            <Rating />
+            <PassportForm />
 
             <button onClick={() => props.removeItem(props.restaurant)}>
                 Remove from passport
