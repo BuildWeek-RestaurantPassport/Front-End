@@ -1,9 +1,7 @@
 import React from 'react';
-import useForm from 'react-hook-form';
 
 const PassportForm = (props) => {
 
-    const { register, handleSubmit, errors } = useForm();
 
     return (
 
