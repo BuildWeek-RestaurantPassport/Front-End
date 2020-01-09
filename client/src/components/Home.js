@@ -11,12 +11,12 @@ const Home = props => {
             <div className="search">
                 <input
                     type="text"
-                    placeholder="Search"
+                    placeholder="Find a restaurant"
                     value={props.searchTerm}
                     onChange={handleChange}
                 />
                 <button onClick={() => props.history.push("/results")}>
-                    Search
+                    Find
                 </button>
             </div>
         </div>
