@@ -23,7 +23,7 @@ const Register = (props) => {
 
     return (
         <div className='registration-container'>
-            <h2>Create your passport</h2>
+            <h2>Register your passport</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='form-group'>
                     <label htmlFor='username'>Username</label>
