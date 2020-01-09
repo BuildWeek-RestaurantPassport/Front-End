@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 
 // Components
 import Navigation from './components/header/Navigation';
-import Restaurants from './components/restaurants/RestaurantList';
+import Restaurants from './components/restaurants/Restaurants';
 
 function App() {
 

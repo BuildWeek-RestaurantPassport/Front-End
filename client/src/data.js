@@ -1,56 +1,65 @@
 export default [
     {
         id: 1,
-        title: 'Seito Sushi',
-        street: '8031 Turkey Lake Rd',
-        city: 'Orlando, FL'
+        name: 'Seito Sushi',
+        address: '8031 Turkey Lake Rd',
+        city: 'Orlando, FL',
+        description: 'Sushi restaurant'
     },
     {
         id: 2,
-        title: 'Danketsu',
-        street: '500 16th St',
-        city: 'Orlando, FL'
+        name: 'Danketsu',
+        address: '500 16th St',
+        city: 'Orlando, FL',
+        description: 'Asian fusion'
     },
     {
         id: 3,
-        title: 'Santiago’s Bodega',
-        street: '802 Virginia Dr',
-        city: 'Orlando, FL'
+        name: 'Santiago’s Bodega',
+        address: '802 Virginia Dr',
+        city: 'Orlando, FL',
+        description: 'Tapas restaurant'
     },
     {
         id: 4,
-        title: 'The Stubborn Mule',
-        street: '100 S Eola Dr',
-        city: 'Orlando, FL'
+        name: 'The Stubborn Mule',
+        address: '100 S Eola Dr',
+        city: 'Orlando, FL',
+        description: 'American restaurant'
     },
     {
         id: 5,
-        title: 'Pig Floyd’s Urban Barbakoa',
-        street: '1326 N Mills Ave',
-        city: 'Orlando. FL'
+        name: 'Pig Floyd’s Urban Barbakoa',
+        address: '1326 N Mills Ave',
+        city: 'Orlando. FL',
+        description: 'Barbecue restaurant'
     },
     {
         id: 6,
-        title: 'Whisper Creek Farm: The Kitchen',
-        street: '4040 Central Florida Pkwy',
-        city: 'Orlando, FL'
+        name: 'Whisper Creek Farm: The Kitchen',
+        address: '4040 Central Florida Pkwy',
+        city: 'Orlando, FL',
+        description: 'American restaurant'
     },
     {
         id: 7,
-        title: 'Hungry Pants',
-        street: '3421 S Orange Ave',
-        city: 'Orlando, FL'
+        name: 'Hungry Pants',
+        address: '3421 S Orange Ave',
+        city: 'Orlando, FL',
+        description: 'American restaurant'
     },
     {
         id: 8,
-        title: 'Bar Harbor Seafood',
-        street: '2000 Premier Row',
-        city: 'Orlando, FL'
+        name: 'Bar Harbor Seafood',
+        address: '2000 Premier Row',
+        city: 'Orlando, FL',
+        description: 'Seafood restaurant'
     },
     {
         id: 9,
-        title: 'Cuba Libre Restaurant & Rum Bar',
-        street: '9101 International Dr',
-        city: 'Orlando, FL'
+        name: 'Cuba Libre Restaurant & Rum Bar',
+        address: '9101 International Dr',
+        city: 'Orlando, FL',
+        description: 'Cuban restaurant'
     }
 ];

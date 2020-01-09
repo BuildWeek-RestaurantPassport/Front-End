@@ -2,7 +2,7 @@ import React from 'react';
 
 import Restaurant from './Restaurant';
 
-const Restaurants = () => (
+const Restaurants = ({ restaurants, addItem }) => (
     <div>
         {restaurants.map(restaurant => (
             <Restaurant
