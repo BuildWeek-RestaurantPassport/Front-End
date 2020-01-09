@@ -5,7 +5,6 @@ import { Route } from 'react-router-dom'
 // Components
 import Navigation from './components/header/Navigation';
 import Home from './components/Home'
-import SignUp from './components/SignUp';
 import Registration from './components/Registration';
 import Restaurants from './components/restaurants/Restaurants';
 
