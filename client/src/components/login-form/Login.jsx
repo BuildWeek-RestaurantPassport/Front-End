@@ -50,7 +50,7 @@ const Login = props => {
         </div>
         <div className="form-group">
           <button className="btn btn-primary" type="submit">
-            Sign In
+            Login
           </button>
         </div>
       </form>
