@@ -3,9 +3,9 @@ import { Route } from 'react-router-dom'
 
 // Components
 import Navigation from './components/header/Navigation';
-import Home from './components/Home'
 import Registration from './components/Registration';
 import Login from './components/Login';
+import Search from './components/Search';
 
 function App() {
 
@@ -15,7 +15,7 @@ function App() {
       <Home />
       <Registration />
       <Login />
-      <Home />
+      <Search />
     </div>
   );
 }
