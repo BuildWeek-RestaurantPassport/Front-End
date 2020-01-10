@@ -6,20 +6,19 @@ export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
 export const LOGIN_ERROR = 'LOGIN_ERROR'
 
 export const login = (creds, history) => dispatch => {
-    dispatch({ type: LOG_START })
+    dispatch({ type: LOGIN_START })
 
     axios
-        .post(`https://node-server-rest-passport.herokuapp.com/users/login`, creds)
-        .then(res => {
-            console.log(res)
-            setTimeout(() => {
-                dispatch({ type: LOGIN_SUCCESS, payload: res.data })
-                history.push('/passport')
-            }, 1500)
-        })
-        .catch(error => dispatch({ type: LOGIN_ERROR }))
+    .post(`https://node-server-rest-passport.herokuapp.com/users/login`, creds)
+    .then(res => {
+        console.log(res)
+        setTimeout(()=>{
+            dispatch({ type: LOGIN_SUCCESS, payload: res.data})
+            history.push('/passport')
+        }, 1500)
+    })
+    .catch(error=>dispatch({ type: LOGIN_ERROR }))
 };
-
 
 
 export const REGISTER_START = 'REGISTER_START'
