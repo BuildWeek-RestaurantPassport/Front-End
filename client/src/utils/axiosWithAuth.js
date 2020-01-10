@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const axiosWithAuth = () => {
-   const token = localStorage.getItem('token');
+    const token = localStorage.getItem('token');
 
    return axios.create({
        baseURL: 'https://node-server-rest-passport.herokuapp.com/',
@@ -9,6 +9,7 @@ const axiosWithAuth = () => {
            Authorization: token 
        }
    });
+
 };
 
 export default axiosWithAuth;

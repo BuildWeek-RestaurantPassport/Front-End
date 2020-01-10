@@ -1,7 +1,7 @@
 import axios from 'axios';
 import axiosWithAuth from '../../utils/axiosWithAuth';
 
-export const LOGIN_START  = 'LOGIN_START'
+export const LOGIN_START = 'LOGIN_START'
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
 export const LOGIN_ERROR = 'LOGIN_ERROR'
 
@@ -27,15 +27,15 @@ export const REGISTER_ERROR = 'REGISTER_ERROR'
 
 export const register = creds => dispatch => {
 
-    dispatch({type: REGISTER_START})
+    dispatch({ type: REGISTER_START })
 
     axios
-    .post(`https://node-server-rest-passport.herokuapp.com/users/register`, creds)
-    .then(res => {
-        console.log(res)
-      dispatch({type: REGISTER_SUCCESS, payload: res.data})
-    })
-    .catch(error => {
-        dispatch({type: REGISTER_ERROR, payload: error})
-    });
+        .post(`https://node-server-rest-passport.herokuapp.com/users/register`, creds)
+        .then(res => {
+            console.log(res)
+            dispatch({ type: REGISTER_SUCCESS, payload: res.data })
+        })
+        .catch(error => {
+            dispatch({ type: REGISTER_ERROR, payload: error })
+        });
 };

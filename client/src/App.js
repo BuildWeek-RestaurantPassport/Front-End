@@ -1,20 +1,21 @@
 import React from 'react';
-import { Route } from 'react-router-dom'
 
 // Components
 import Navigation from './components/header/Navigation';
+import AddCity from './components/AddCity';
 import Registration from './components/Registration';
 import Login from './components/Login';
-import Search from './components/Search';
+import Passport from './components/passport/Passport';
 
 function App() {
 
   return (
     <div className="App">
       <Navigation />
+      <AddCity />
       <Registration />
       <Login />
-      <Search />
+      <Passport />
     </div>
   );
 }
