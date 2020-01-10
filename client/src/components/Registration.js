@@ -35,6 +35,7 @@ const Registration = (props) => {
   };
 
   return (
+    
     // <>
 
     //   <div className="login-container">

@@ -39,7 +39,6 @@ function App() {
         </Switch>
       </div>
     </PassportContext.Provider>
-
   );
 }
 
