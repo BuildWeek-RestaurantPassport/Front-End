@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
+import PassportContext from '../contexts/passportContext';
 import axiosWithAuth from '../utils/axiosWithAuth';
 import styled from "styled-components";
 
@@ -16,6 +17,8 @@ const AddCity = props => {
     const [city, setCity] = useState({
         name: ""
     });
+
+    const { cityData, setCityData } = useContext(PassportContext);
 
     const history = useHistory();
 
@@ -35,7 +38,10 @@ const AddCity = props => {
 
         axiosWithAuth()
             .post('/cities', payload)
-            .then(() => history.push('/passport'))
+            .then(() => {
+                setCityData([...cityData, city.name])
+                history.push('/passport')
+            })
             .catch(error => console.log(`error: ${error}`));
     }
 
@@ -43,8 +49,9 @@ const AddCity = props => {
         <>
             <Container>
                 <form onSubmit={handleSubmit}>
-                    <div className="form-group">
+                    <div className="form-group add-city">
                         <input
+                            name="name"
                             type="text"
                             placeholder="Add a city"
                             value={city.name}

@@ -11,6 +11,7 @@ export const login = (creds, history) => dispatch => {
     axios
     .post(`https://node-server-rest-passport.herokuapp.com/users/login`, creds)
     .then(res => {
+        localStorage.setItem('token', res.data.token)
         console.log(res)
         setTimeout(()=>{
             dispatch({ type: LOGIN_SUCCESS, payload: res.data})

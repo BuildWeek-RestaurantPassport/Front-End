@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import axiosWithAuth from '../utils/axiosWithAuth';
-// import { Button } from "semantic-ui-react";
-// import { withFormik, Form, Field, ErrorMessage } from "formik";
-// import styled from "styled-components";
-// import axios from "axios";
-// import * as Yup from "yup"
+import { Button } from "semantic-ui-react";
+import { withFormik, Form, Field, ErrorMessage } from "formik";
+import styled from "styled-components";
+import axios from "axios";
+import * as Yup from "yup";
 
 const Registration = (props) => {
 
@@ -35,8 +35,69 @@ const Registration = (props) => {
   };
 
   return (
+    // <>
 
-    <div className='login-container'>
+    //   <div className="login-container">
+    //     <h1>Register</h1>
+    //     <Form className="form">
+    //       <Field
+    //         className="field"
+    //         component="input"
+    //         type="text"
+    //         name="username"
+    //         placeholder="User Name"
+    //       />
+    //       <br /> <br />
+    //       <ErrorMessage name="username" />
+    //       <br /> <br />
+    //       <Field
+    //         className="field"
+    //         component="input"
+    //         type="password"
+    //         name="password"
+    //         placeholder="Password"
+    //       />
+    //       <br /> <br />
+    //       <ErrorMessage name="password" />
+    //       <br /> <br />
+    //       <Field
+    //         className="field"
+    //         component="input"
+    //         type="text"
+    //         name="fullname"
+    //         placeholder="Full Name"
+    //       />
+    //       <br /> <br />
+    //       <ErrorMessage name="fullname" />
+    //       <br /> <br />
+    //       <Field
+    //         className="field"
+    //         component="input"
+    //         type="text"
+    //         name="city"
+    //         placeholder="City"
+    //       />
+    //       <br /> <br />
+    //       <ErrorMessage name="city" />
+    //       <br /> <br />
+    //       <Field
+    //         className="field"
+    //         component="input"
+    //         type="email"
+    //         name="email"
+    //         placeholder="Email Address"
+    //       />
+    //       <br /> <br />
+    //       <ErrorMessage name="email" />
+    //       <br /> <br />
+
+    //       <Button type="submit"> Register </Button>
+    //       <br /> <br />
+    //     </Form>
+    //   </div>
+    // </>
+
+    <div className='form-container'>
 
       <h2>Register</h2>
 

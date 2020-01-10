@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom'
 import { login } from '../components/actions'
 
 function Login(props) {
-  
+
   const [creds, setCreds] = useState({})
 
   const handleChange = e => {
@@ -16,19 +16,27 @@ function Login(props) {
 
   const onSubmit = e => {
     e.preventDefault()
-   props.login(creds, props.history)
+    props.login(creds, props.history)
   }
 
   return (
-   <>
-      <form onSubmit={onSubmit}>
-        <input type = "text" name="username" placeholder="username" value={creds.username} onChange={handleChange}></input>
-        <input type = "password" name="password" placeholder="password" value={creds.password} onChange={handleChange}></input>
-  
-        <button type="submit"> Log In </button>
-      </form>
-  
-   </>
+    <>
+      <div className='form-container'>
+        <h2>Login</h2>
+        <form onSubmit={onSubmit}>
+          <div className="form-group">
+            <input className="form-control" type="text" name="username" placeholder="username" value={creds.username} onChange={handleChange}></input>
+          </div>
+          <div className="form-group">
+            <input className="form-control" type="password" name="password" placeholder="password" value={creds.password} onChange={handleChange}></input>
+          </div>
+          <button className="btn btn-primary" type="submit"> Log In </button>
+
+        </form>
+
+      </div>
+
+    </>
   )
 }
 
