@@ -1,5 +1,3 @@
-// stylelint-disable selector-no-qualifying-type
-
 //
 // Textual form controls
 //
@@ -242,4 +240,19 @@
       width: 100%;
     }
 
+  }
+
+  .form-container {
+    width: 100%;
+    max-width: 330px;
+    padding: 1rem;
+    margin: auto;
+  }
+
+  .add-city {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
   }
