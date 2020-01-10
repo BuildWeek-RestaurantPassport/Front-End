@@ -64,7 +64,7 @@ function Registration() {
           <ErrorMessage name="email" />
           <br /> <br />
           <p>Already have an account? {LogIn}</p>
-          <Button type="submit"> Login </Button>
+          <Button type="submit"> Register </Button>
           <br /> <br />
         </Form>
       </div>
