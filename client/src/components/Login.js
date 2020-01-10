@@ -5,24 +5,9 @@ import { Button, Grid } from 'semantic-ui-react'
 import { Form, Field, withFormik } from 'formik'
 
 
-const LogIn = ({ errors, touched }) => {
+const LogIn = ({ errors, touched, status, history }) => {
 
-  const [creds, setCreds] = useState({
-    username: "",
-    password: ""
-  })
 
-  const onSubmit = e => {
-    e.preventDefault()
-    props.login(creds, props.history)
-  }
-
-  const handleChange = e => {
-    setCreds({
-      ...creds,
-      [e.target.name]: e.target.value
-    })
-  }
 
   const registerLink = (
     <Link to='/register' className='register-link'>Register</Link>

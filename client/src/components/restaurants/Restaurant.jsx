@@ -1,20 +1,21 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import axiosWithAuth from '../../utils/axiosWithAuth';
-import PassportContext from '../contexts/PassportContext';
 
 const Restaurant = (props) => {
-    const { removeItem } = useContext(PassportContext);
 
+    const history = useHistory();
     const params = useParams();
 
-    const fetchRestaurant = () => {
-        axiosWithAuth()
-            .get(`/cities/restaurant/${params.id}`)
-            .then(() => {
+    const removeRestaurant = event => {
+        event.preventDefault();
 
+        axiosWithAuth()
+            .delete(`/cities/restaurants/${params.id}`)
+            .then(() => {
+                history.push(`/cities/${params.id}/restaurants`);
             })
-            .catch(error => console.log("Error", error))
+            .catch(error => console.log("Unable to delete restaurant", error.message));
     };
 
     return (
@@ -27,7 +28,7 @@ const Restaurant = (props) => {
                 <span>{props.restaurant.city}</span>
             </address>
 
-            <button onClick={() => removeItem(props.id)}>
+            <button onClick={removeRestaurant}>
                 Remove from passport
 			</button>
         </div>

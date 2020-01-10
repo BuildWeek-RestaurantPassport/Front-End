@@ -6,7 +6,7 @@ import AddCity from './components/AddCity';
 import Registration from './components/Registration';
 import Login from './components/Login';
 import Passport from './components/passport/Passport';
-
+import Restaurants from './components/restaurants/Restaurants';
 function App() {
 
   return (
@@ -16,6 +16,7 @@ function App() {
       <Registration />
       <Login />
       <Passport />
+      <Restaurants />
     </div>
   );
 }
