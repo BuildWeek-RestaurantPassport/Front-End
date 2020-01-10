@@ -6,16 +6,20 @@ import AddCity from './components/AddCity';
 import Registration from './components/Registration';
 import Login from './components/Login';
 import Passport from './components/passport/Passport';
+import { Route, Switch } from 'react-router-dom';
+import PrivateRoute from './utils/PrivateRoute';
 
 function App() {
 
   return (
     <div className="App">
       <Navigation />
-      <AddCity />
-      <Registration />
-      <Login />
-      <Passport />
+    <Switch>
+      <Route path="/Registration" component={Registration} />
+      <Route path="/Login" component={Login} /> 
+      <PrivateRoute path="/AddCity" component={AddCity} /> 
+      <PrivateRoute path="/Passport" component={Passport} /> 
+    </Switch>
     </div>
   );
 }
