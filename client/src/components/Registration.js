@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import axiosWithAuth from '../utils/axiosWithAuth';
-// import { Button } from "semantic-ui-react";
-// import { withFormik, Form, Field, ErrorMessage } from "formik";
-// import styled from "styled-components";
-// import axios from "axios";
-// import * as Yup from "yup";
+import { Button } from "semantic-ui-react";
+import { withFormik, Form, Field, ErrorMessage } from "formik";
+import styled from "styled-components";
+import axios from "axios";
+import * as Yup from "yup";
 
 const Registration = (props) => {
 
@@ -37,7 +37,7 @@ const Registration = (props) => {
   return (
     <>
 
-      <div className="login-container">
+    <div className="login-container">
         <h1>Register</h1>
         <Form className="form">
           <Field
@@ -90,7 +90,7 @@ const Registration = (props) => {
           <br /> <br />
           <ErrorMessage name="email" />
           <br /> <br />
-          <p>Already have an account? {LogIn}</p>
+          
           <Button type="submit"> Register </Button>
           <br /> <br />
         </Form>
