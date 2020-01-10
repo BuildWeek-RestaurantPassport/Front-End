@@ -2,17 +2,12 @@ import React from 'react';
 
 const PassportItem = props => {
     return (
-        <div className="restaurant">
+        <div className="card-container">
 
-            <h1 className="title">{props.restaurant.title}</h1>
+            <h1 className="title">{props.city.name}</h1>
 
-            <address className="address">
-                <span>{props.restaurant.street}</span>
-                <span>{props.restaurant.city}</span>
-            </address>
-
-            <button onClick={() => props.removeItem(props.restaurant)}>
-                Remove from passport
+            <button to='/restaurants'>
+                View restaurants
 			</button>
         </div>
     );
