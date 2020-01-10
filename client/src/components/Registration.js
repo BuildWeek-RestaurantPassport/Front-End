@@ -16,23 +16,23 @@ const Registration = (props) => {
   const onSubmit = async data => {
     if (data.password === data.confirmPassword) {
 
-      setUserRegistration({
+
+      const payload = {
         'username': data.username,
         'password': data.password,
         'email': data.email
+      }
 
-      })
+      console.log(payload)
+
+      axiosWithAuth()
+        .post("/users/register", payload)
+        .then(response => {
+          console.log("Account registered", response.data);
+        })
+        .catch(error => console.log(error));
     }
   };
-
-  useEffect(() => {
-    axiosWithAuth()
-      .post("/users/register", userRegistration)
-      .then(response => {
-        console.log("Account registered", response.data);
-      })
-      .catch(error => console.log(error));
-  }, [userRegistration]);
 
   return (
 
@@ -66,7 +66,7 @@ const Registration = (props) => {
         </div>
 
         <div className='form-group'>
-          <Link className='btn btn-primary' to='/passport'>Create Account</Link>
+          <button className='btn btn-primary' type="submit">Create Account</button>
         </div>
 
       </form>
