@@ -32,7 +32,7 @@ function App() {
         {localStorage.getItem('token') && !location.pathname.includes('add-restaurant') && <AddCity />}
         <Switch>
           <Route path="/registration" component={Registration} />
-          <Route path="/" component={Login} />
+          <Route exact path="/" component={Login} />
           <PrivateRoute path="/passport" component={Passport} />
           <PrivateRoute path="/cities/:id/add-restaurant" component={AddRestaurant} />
           <PrivateRoute exact path="/cities/:id" component={Restaurants} />
