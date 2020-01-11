@@ -43,8 +43,13 @@
     }
 
 .btn-outline-primary {
-  color: $primary;
+  color: $primary !important;
   border-color: $primary;
+
+  &:hover {
+    color: $white !important;
+    background-color: $primary;
+  }
 }
 
 //
