@@ -15,6 +15,7 @@
     background-color: $input-bg;
     background-clip: padding-box;
     border: $input-border-width solid $input-border-color;
+    border-radius: 0.25rem;
 
     // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
     // @include border-radius($input-border-radius, 0);
@@ -246,13 +247,68 @@
     width: 100%;
     max-width: 330px;
     padding: 1rem;
-    margin: auto;
+    margin: 8rem auto 0;
+    background: #dfe6ed;
+    border: 1px solid #cbd4de;
   }
 
-  .add-city {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
+  .form-footer {
     width: 100%;
+    max-width: 330px;
+    padding: 1rem;
+    margin: 0 auto;
   }
+
+.input-group {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+
+.input-group-append {
+  display: flex;
+  margin-left: 10px;
+}
+
+.input-group-prepend:not(:first-child) > .input-group-text, .input-group > .input-group-prepend:first-child > .btn:not(:first-child), .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.input-group > .form-control:not(:last-child), .input-group > .custom-select:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.form-control::placeholder {
+  color:#8c98a4;
+  opacity: 1;
+}
+
+.input-group > .form-control:not(:last-child), .input-group > .custom-select:not(:last-child) {
+
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+
+}
+.input-group > .form-control, .input-group > .form-control-plaintext, .input-group > .custom-select, .input-group > .custom-file {
+
+  position: relative;
+  -ms-flex: 1 1 0%;
+  flex: 1 1 0%;
+  min-width: 0;
+  margin-bottom: 0;
+
+}
+
+.form-group > input, .form-group > label {
+
+  height: 3.125rem;
+  padding: 0.75rem;
+
+}

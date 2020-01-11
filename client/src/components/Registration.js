@@ -35,7 +35,7 @@ const Registration = (props) => {
   };
 
   return (
-    
+
     // <>
 
     //   <div className="login-container">
@@ -97,43 +97,47 @@ const Registration = (props) => {
     //     </Form>
     //   </div>
     // </>
+    <>
+      <div className='form-container'>
 
-    <div className='form-container'>
+        <h2>Register</h2>
 
-      <h2>Register</h2>
+        <form onSubmit={handleSubmit(onSubmit)}>
 
-      <form onSubmit={handleSubmit(onSubmit)}>
+          <div className='form-group'>
+            <label htmlFor='username'>Username</label>
+            <input className='form-control' type='text' name='username' id='username' ref={register({ required: true })} />
+            {errors.username && 'A username is required.'}
+          </div>
 
-        <div className='form-group'>
-          <label htmlFor='username'>Username</label>
-          <input className='form-control' type='text' name='username' id='username' ref={register({ required: true })} />
-          {errors.username && 'A username is required.'}
-        </div>
+          <div className='form-group'>
+            <label htmlFor='email'>Email Address</label>
+            <input className='form-control focus:border' type='email' name='email' id='email' ref={register({
+              required: true, pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i, message: "An email address is required."
+              }
+            })} />
+            {errors.email && errors.email.message}
+          </div>
 
-        <div className='form-group'>
-          <label htmlFor='email'>Email Address</label>
-          <input className='form-control' type='email' name='email' id='email' ref={register({
-            required: true, pattern: {
-              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i, message: "An email address is required."
-            }
-          })} />
-          {errors.email && errors.email.message}
-        </div>
+          <div className='form-group'>
+            <label htmlFor='password'>Password</label>
+            <input className='form-control focus:border' type='password' name='password' id='password' ref={register({ required: true, minLength: 4 })} />
+            <label htmlFor='confirmPassword'>Confirm Password</label>
+            <input className='form-control focus:border' type='password' name='confirmPassword' id='confirmPassword' ref={register({ required: true, minLength: 4 })} />
+          </div>
 
-        <div className='form-group'>
-          <label htmlFor='password'>Password</label>
-          <input className='form-control' type='password' name='password' id='password' ref={register({ required: true, minLength: 4 })} />
-          <label htmlFor='confirmPassword'>Confirm Password</label>
-          <input className='form-control' type='password' name='confirmPassword' id='confirmPassword' ref={register({ required: true, minLength: 4 })} />
-        </div>
+          <div className='form-group'>
+            <button className='btn btn-primary' type="submit">Create Account</button>
+          </div>
 
-        <div className='form-group'>
-          <button className='btn btn-primary' type="submit">Create Account</button>
-        </div>
+        </form>
 
-      </form>
-
-    </div>
+      </div>
+      <div className="form-footer">
+        <p>Already have an account? <Link to='/' className="">Login</Link></p>
+      </div>
+    </>
 
   );
 
