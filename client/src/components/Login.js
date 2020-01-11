@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { connect } from 'react-redux'
-import { withRouter } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import { login } from '../components/actions'
 
 function Login(props) {
@@ -21,19 +21,28 @@ function Login(props) {
 
   return (
     <>
-      <div className='form-container'>
+      <div className='form-container' style={{ background: '#dfe6ed', margin: '8rem auto 0', border: '1px solid #cbd4de' }}>
+
         <h2>Login</h2>
+
         <form onSubmit={onSubmit}>
+
           <div className="form-group">
-            <input className="form-control" type="text" name="username" placeholder="username" value={creds.username} onChange={handleChange}></input>
+            <input className="form-control focus:border" type="text" name="username" placeholder="Username" value={creds.username} onChange={handleChange}></input>
           </div>
+
           <div className="form-group">
-            <input className="form-control" type="password" name="password" placeholder="password" value={creds.password} onChange={handleChange}></input>
+            <input className="form-control focus:border" type="password" name="password" placeholder="Password" value={creds.password} onChange={handleChange}></input>
           </div>
-          <button className="btn btn-primary" type="submit"> Log In </button>
+
+          <button className="btn btn-primary" type="submit">Login</button>
 
         </form>
 
+      </div>
+
+      <div className="form-footer">
+        <Link to='/registration' className="">Register</Link>
       </div>
 
     </>

@@ -5,12 +5,11 @@ import axiosWithAuth from '../utils/axiosWithAuth';
 import styled from "styled-components";
 
 const Container = styled.div`
-    display:flex;
-    align-items: center;
-    background: #fafafa;
-    width: 100%;
-    margin: 0 auto;
-    padding: 10px 10px;
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1.5rem;
+    padding-botton: 1.5rem;
 `
 
 const AddCity = props => {
@@ -48,15 +47,17 @@ const AddCity = props => {
     return (
         <>
             <Container>
-                <form onSubmit={handleSubmit}>
-                    <div className="form-group add-city">
-                        <input
-                            name="name"
-                            type="text"
-                            placeholder="Add a city"
-                            value={city.name}
-                            onChange={handleChange}
-                        />
+                <form onSubmit={handleSubmit} className="js-focus-state input-group">
+                    <input
+                        className="form-control"
+                        name="name"
+                        type="text"
+                        placeholder="Add a city"
+                        aria-label="Add a city"
+                        value={city.name}
+                        onChange={handleChange}
+                    />
+                    <div className="input-group-append">
                         <button className="btn btn-primary" type="submit">
                             Add
                         </button>
