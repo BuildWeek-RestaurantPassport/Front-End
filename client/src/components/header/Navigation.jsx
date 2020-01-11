@@ -13,7 +13,7 @@ const Navigation = () => {
 
         localStorage.removeItem('token');
         setCityData([]);
-        history.push('/login');
+        history.push('/');
     }
 
     useEffect(() => {
