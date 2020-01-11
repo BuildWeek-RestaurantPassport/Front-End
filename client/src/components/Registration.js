@@ -105,14 +105,12 @@ const Registration = (props) => {
         <form onSubmit={handleSubmit(onSubmit)}>
 
           <div className='form-group'>
-            <label htmlFor='username'>Username</label>
-            <input className='form-control' type='text' name='username' id='username' ref={register({ required: true })} />
+            <input className='form-control' type='text' name='username' id='username' placeholder='Username' ref={register({ required: true })} />
             {errors.username && 'A username is required.'}
           </div>
 
           <div className='form-group'>
-            <label htmlFor='email'>Email Address</label>
-            <input className='form-control focus:border' type='email' name='email' id='email' ref={register({
+            <input className='form-control focus:border' type='email' name='email' id='email' placeholder='Email' ref={register({
               required: true, pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i, message: "An email address is required."
               }
@@ -121,14 +119,13 @@ const Registration = (props) => {
           </div>
 
           <div className='form-group'>
-            <label htmlFor='password'>Password</label>
-            <input className='form-control focus:border' type='password' name='password' id='password' ref={register({ required: true, minLength: 4 })} />
-            <label htmlFor='confirmPassword'>Confirm Password</label>
-            <input className='form-control focus:border' type='password' name='confirmPassword' id='confirmPassword' ref={register({ required: true, minLength: 4 })} />
+            <input className='form-control focus:border' type='password' name='password' id='password' placeholder='Password' ref={register({ required: true, minLength: 4 })} />
           </div>
-
           <div className='form-group'>
-            <button className='btn btn-primary' type="submit">Create Account</button>
+            <input className='form-control focus:border' type='password' name='confirmPassword' id='confirmPassword' placeholder='Confirm Password' ref={register({ required: true, minLength: 4 })} />
+          </div>
+          <div className='form-group'>
+            <button className='btn btn-primary' type="submit">Register Passport</button>
           </div>
 
         </form>
