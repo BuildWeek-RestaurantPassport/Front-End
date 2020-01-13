@@ -30,29 +30,28 @@ const AddRestaurant = props => {
             <h2>Add Restaurant</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='form-group'>
-                    <label htmlFor='name'>Name</label>
                     <input
                         className='form-control'
                         type='text'
                         name='name'
+                        placeholder='Restaurant Name'
                         ref={register({ required: true, })} />
                     {errors.name && 'Restaurant name is required'}
                 </div>
                 <div className='form-group'>
-                    <label htmlFor='address'>Address</label>
                     <input
                         className='form-control'
                         name='address'
+                        placeholder='Address'
                         ref={register({ required: true, })} />
                     {errors.name && 'Restaurant address is required'}
                 </div>
                 <div className='form-group'>
-                    <label htmlFor='description'>Description</label>
                     <input
                         className='form-control'
                         type='text'
                         name='description'
-                        placeholder='American restaurant'
+                        placeholder='Description (i.e. American restaurant)'
                         ref={register({ required: true, })} />
                     {errors.name && 'Restaurant description is required'}
                 </div>
